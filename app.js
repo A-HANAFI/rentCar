@@ -7,10 +7,10 @@ var path = require('path');
 
 var app = express();
 
-const route = require ('./routes/route.js');
+const caRoute = require ('./routes/caRoute.js');
 
 //connect to mongoDB
-mongoose.connect('mongodb://localhost:27017/carList');
+mongoose.connect('mongodb://localhost:27017/rentCar');
 
 //no connection
 mongoose.connection.on('connected', ()=>{
@@ -33,7 +33,7 @@ app.use(bodyparser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
-app.use('/', route);
+app.use('/', caRoute);
 
 //testing server
 app.get('/', (req, res) => {

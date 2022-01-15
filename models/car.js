@@ -20,6 +20,22 @@ const carSchema = mongoose.Schema({
     categorie: {
         type : String,
         required : true
+    },
+    nombre_disponibles: {
+        type : Number,
+        required : true
+    },
+    image_url: {
+        type: String,
+        required : true
+    },
+    description:{
+        type: String,
+        required : true
+    },
+    title: {
+        type : String,
+        required: true
     }
 
 });
