@@ -1,1 +1,7 @@
-<app-car></app-car>
+<div class="row">
+    <app-car 
+        class= "col-xs-12 col-md-4 car"
+        *ngFor="let car of cars"
+        [car]="car"
+    ></app-car>
+</div>

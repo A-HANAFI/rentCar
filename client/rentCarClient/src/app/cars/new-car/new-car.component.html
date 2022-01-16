@@ -1,0 +1,74 @@
+<script src="./src/bootstrap-input-spinner.js"></script>
+<script>
+    $("input[type='number']").inputSpinner()
+</script>
+
+<h4 class="text-muted mb-4 display-3">ajouter voiture</h4>
+<form (submit)="addCar()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="form-outline">
+            <label class="form-label" for="code">code voiture</label>
+            <input type="text" id="code" class="form-control" [(ngModel)] = "car.code" />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-outline">
+            <label class="form-label" for="matr">matricule</label>
+            <input type="text" id="matr" class="form-control" [(ngModel)] = "car.matricule"/>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-outline">
+            <label class="form-label" for="modele">modele</label>
+            <input type="text" id="modele" class="form-control" [(ngModel)] = "car.model"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-3">
+          <div class="form-outline">
+              <label class="form-label" for="prix">prix</label>
+              <input type="text" id="prix" class="form-control" [(ngModel)] = "car.prix"/>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-outline">
+              <label class="form-label" for="categorie">categorie</label>
+              <input type="text" id="categorie" class="form-control" [(ngModel)]="car.categorie" />
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-outline">
+              <label class="form-label" for="modele">nombre disponible</label>
+              <input type="number" id="modele" class="form-control" placeholder="0" [(ngModel)]="car.nombre_disponible" />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-outline mb-4 col-md-4">
+        <label class="form-label" for="titre">titre</label>
+        <input type="text" id="titre" class="form-control" [(ngModel)]="car.title"/>
+      </div>
+  
+    <!-- Text input -->
+    <div class="form-outline col-md-6 mb-4">
+        <label class="form-label" for="lien">lien image</label>
+        <input type="text" id="lien" class="form-control" [(ngModel)]="car.image_url" />
+      
+    </div>
+  
+    <!-- Text input -->
+  
+    <!-- Message input -->
+    <div class="form-outline mb-4 col-md-6">
+        <label class="form-label" for="form6Example7">remarque</label>
+        <textarea class="form-control" id="form6Example7" rows="2"></textarea>
+      
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Ajouter</button>
+  </form>

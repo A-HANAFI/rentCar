@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Car} from '../../shared/car';
 
 @Component({
   selector: 'app-car',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarComponent implements OnInit {
 
+  @Input() car: Car;
   constructor() { }
 
   ngOnInit(): void {
   }
-   image = 'https://bo.ucar.fr/Medias/Images/Vehicules/U/Location-Renault-Twingo.png'
 
 }

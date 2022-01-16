@@ -16,4 +16,10 @@ export class CarsService {
   getcars(): Observable<Car[]>{
     return <Observable<Car[]>> this.http.get('http://localhost:3000/cars');
   }
+
+  addCar(newCar: Car){
+    var headers = new HttpHeaders();
+    headers.append('Content-type', 'application/json');
+    return <Observable<Car>> this.http.post('http://localhost:3000/newcar', newCar, {headers: headers});
+  }
 }
